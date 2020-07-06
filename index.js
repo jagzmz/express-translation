@@ -9,7 +9,7 @@ const _makeTranslations = require('./lib/make-translations');
 const { makePathMatchers, makeConfig } = require('./lib/utils');
 const { filter } = require('lodash');
 
-function Et(option) {
+const Et = function (option) {
     this.settings = option.etSettings;
     this.config = option.etConfig;
     this.triggerHeader = this.settings.triggerHeader;
@@ -18,7 +18,7 @@ function Et(option) {
     makeConfig(this.config, this.settings.configPath);
     this.pathMatchers = makePathMatchers(this.config);
     return makeMiddleware.call(this);
-}
+};
 
 Et.prototype.getKeyPattern = function () {
     return this.keyPattern;
@@ -87,7 +87,7 @@ Et.prototype.hasApiPath = function (method, apiPath) {
     return matchedPaths.length === 1 ? matchedPaths[0].originalPath : false;
 };
 
-function et(options = {}) {
+const et = function (options = {}) {
     if (!options.etSettings) {
         throw new Error('etSettings is required.');
     }
@@ -97,6 +97,6 @@ function et(options = {}) {
     }
 
     return new Et(options);
-}
+};
 
 module.exports = et;
