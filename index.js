@@ -7,7 +7,7 @@ const verifyOptions = require('./lib/verify.js');
 const makeMiddleware = require('./lib/make-middleware');
 const _makeTranslations = require('./lib/make-translations');
 const { makePathMatchers, makeConfig } = require('./lib/utils');
-const { filter } = require('lodash');
+const { filter, cloneDeep } = require('lodash');
 
 const Et = function (option) {
     this.settings = option.etSettings;
@@ -62,7 +62,7 @@ Et.prototype.makeTranslations = function (...args) {
 };
 
 Et.prototype.getApiConfig = function (apiPath) {
-    return this.config[apiPath];
+    return cloneDeep(this.config[apiPath]);
 };
 
 Et.prototype.hasApiPath = function (method, apiPath) {
