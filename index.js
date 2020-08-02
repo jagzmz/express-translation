@@ -42,11 +42,10 @@ Et.prototype.getSupportedTranslations = function () {
 };
 
 Et.prototype.setSupportedTranslations = function (translations = []) {
-    this.supportedTranslations =
-        [
-            ...this.getSupportedTranslations(),
-            ...translations,
-        ];
+    this.supportedTranslations = [
+        ...this.getSupportedTranslations(),
+        ...translations,
+    ];
 };
 
 Et.prototype.getSettings = function () {
@@ -76,7 +75,7 @@ Et.prototype.hasApiPath = function (method, apiPath) {
     if (matchedPaths.length > 1) {
         matchedPaths = filter(
             matchedPaths,
-            path => path.originalPath === apiPath
+            (path) => path.originalPath === apiPath
         );
     }
 

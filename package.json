@@ -1,33 +1,39 @@
 {
-  "name": "express-translations",
-  "version": "1.0.0",
-  "description": "An express middleware for translating API request/response.",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/jagzmz/express-translation.git"
-  },
-  "keywords": [
-    "express",
-    "translations",
-    "middleware",
-    "express-translations"
-  ],
-  "author": "Mahesh Jaganiya",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jagzmz/express-translation/issues"
-  },
-  "homepage": "https://github.com/jagzmz/express-translation#readme",
-  "dependencies": {
-    "app-root-path": "^3.0.0",
-    "lodash": "^4.17.19",
-    "path-to-regexp": "^6.1.0"
-  }
+    "name": "express-translations",
+    "version": "1.0.0",
+    "description": "An express middleware for translating API request/response.",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/jagzmz/express-translation.git"
+    },
+    "keywords": [
+        "express",
+        "translations",
+        "middleware",
+        "express-translations"
+    ],
+    "author": "Mahesh Jaganiya",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jagzmz/express-translation/issues"
+    },
+    "homepage": "https://github.com/jagzmz/express-translation#readme",
+    "dependencies": {
+        "app-root-path": "^3.0.0",
+        "lodash": "^4.17.19",
+        "path-to-regexp": "^6.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.6.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "^2.0.5"
+    }
 }
