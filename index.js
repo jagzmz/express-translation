@@ -13,6 +13,7 @@ const Et = function (option) {
     this.settings = option.etSettings;
     this.config = option.etConfig;
     this.triggerHeader = this.settings.triggerHeader;
+    this.fallbackHeader = this.settings.fallbackHeader;
     this.keyPattern = this.settings.keyPattern;
     verifyOptions(this, option.etSettings, this.config);
     makeConfig(this.config, this.settings.configPath);
