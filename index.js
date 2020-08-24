@@ -69,7 +69,10 @@ Et.prototype.hasApiPath = function (method, apiPath) {
     // Always should be single match
     let matchedPaths = [];
     for (const pathRegExp of this.pathMatchers) {
-        if (pathRegExp.exec(apiPath) && method === pathRegExp.apiMethod) {
+        if (
+            pathRegExp.exec(apiPath.split(/[#?]/)[0]) &&
+            method === pathRegExp.apiMethod
+        ) {
             matchedPaths.push(pathRegExp);
         }
     }
