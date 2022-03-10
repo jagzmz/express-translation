@@ -79,7 +79,7 @@ Et.prototype.hasApiPath = function (method, apiPath) {
     if (matchedPaths.length > 1) {
         matchedPaths = filter(
             matchedPaths,
-            (path) => path.originalPath.toLowerCase() === apiPathtoLowerCase()
+            (path) => path.originalPath.toLowerCase() === apiPath.toLowerCase()
         );
     }
 
